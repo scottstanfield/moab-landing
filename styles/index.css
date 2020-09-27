@@ -209,7 +209,7 @@ button:hover {
 .hero-container .hero-image {
   width: 50%;
   height: auto;
-  background-image: url("../moab-rendering-example.png");
+  background-image: url("../images/moab-rendering-example.png");
   background-size: contain;
   background-position-y: 30%;
   background-repeat: no-repeat;
@@ -263,7 +263,7 @@ button:hover {
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url("../play-button.svg");
+  background-image: url("../images/play-button.svg");
   background-position: center;
   background-size: contain;
   position: absolute;
@@ -317,7 +317,7 @@ button:hover {
 }
 
 .tutorial-card-container .tutorial-1 {
-  background-image: url("../moab-rendering-example.png");
+  background-image: url("../images/moab-rendering-example.png");
 }
 
 .tutorial-card-container .tutorial-2 {
