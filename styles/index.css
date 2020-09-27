@@ -1,14 +1,17 @@
-body {
-  font-family: Inter, system-ui, sans-serif, Arial;
+* {
   color: #333333;
   font-weight: 400;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif, Arial;
   padding: 0;
   margin: 0;
 }
 
 .primary-container {
   width: 90%;
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -17,29 +20,69 @@ body {
   max-width: 600px;
 }
 
+.nav {
+  padding: 50px 0px 20px 0px;
+}
+
+.nav a {
+  font-size: 18px;
+  padding-bottom: 8px;
+  margin-right: 32px;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+
+.nav a:hover {
+  border-bottom: 4px #ee7100 solid;
+}
+
+.nav-content {
+  display: block;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+}
+
 h1 {
+  font-family: "IBM Plex Mono", mono;
   font-size: 60px;
   font-weight: 800;
-  line-height: 140%;
-  margin: 16px 0;
+  line-height: 130%;
+  margin: 8px 0;
 }
 
 h2 {
   font-size: 40px;
   font-weight: 800;
-  line-height: 140%;
-  margin: 16px 0;
+  line-height: 130%;
+  margin: 8px 0;
 }
 
 h3 {
   font-size: 26px;
   font-weight: 400;
-  line-height: 140%;
-  margin: 16px 0;
+  line-height: 130%;
+  margin: 8px 0;
+}
+
+.small-caps {
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", mono;
 }
 
 button {
-  font-size: 26px;
+  cursor: pointer;
+  font-size: 18px;
   font-family: Inter, system-ui, sans-serif, Arial;
   background-color: #ee7100;
   border: none;
@@ -47,6 +90,12 @@ button {
   border-radius: 4px;
   color: white;
   margin: 16px 0px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d86602;
 }
 
 .hero-container {

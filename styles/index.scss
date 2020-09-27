@@ -1,9 +1,10 @@
 // Variables
 // font-family, size, weight
 $ff-sans: Inter, system-ui, sans-serif, Arial;
-$ff-serif: Georgia;
+$ff-serif: Georgia, serif;
+$ff-mono: 'IBM Plex Mono', mono;
 
-$fs-body: 16px;
+$fs-default: 18px;
 $fs-header-large: 60px;
 $fs-header-medium: 40px;
 $fs-header-small: 26px;
@@ -13,29 +14,33 @@ $fw-medium: 600;
 $fw-heavy: 800;
 
 // line-height
-$lh-default: 140%;
+$lh-default: 130%;
 $lh-tall: 160%;
 
 // colors
 $color-default: #333333;
-$color-moab-orange: #ee7100;
+$color-orange: #ee7100;
+  $color-orange-hover: #d86602;
 $color-white: #ffffff;
 $color-link: blue;
 
 // END Variables -----
 
 // Layout
-body {
-  font-family: $ff-sans;
+* {
   color: $color-default;
   font-weight: $fw-default;
+}
+
+body {
+  font-family: $ff-sans;
   padding: 0;
   margin: 0;
 }
 
 .primary-container {
   width: 90%;
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -44,37 +49,78 @@ body {
   max-width: 600px;
 }
 
+.nav {
+  padding: 50px 0px 20px 0px;
+  a {
+    font-size: $fs-default;
+    padding-bottom: 8px;
+    margin-right: 32px;
+    text-decoration: none;
+    display: inline-block;
+    transition: border 0.15s ease-in-out;
+    &:hover {
+      border-bottom: 4px $color-orange solid;
+    }
+  }
+}
+
+.nav-content {
+  display: block;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-right {
+  float: right;
+}
+
 // Elements
 h1 {
+  font-family: $ff-mono;
   font-size: $fs-header-large;
   font-weight: $fw-heavy;
   line-height: $lh-default;
-  margin: 16px 0;
+  margin: 8px 0;
 }
 
 h2 {
   font-size: $fs-header-medium;
   font-weight: $fw-heavy;
   line-height: $lh-default;
-  margin: 16px 0;
+  margin: 8px 0;
 }
 
 h3 {
   font-size: $fs-header-small;
   font-weight: $fw-default;
   line-height: $lh-default;
-  margin: 16px 0;
+  margin: 8px 0;
+}
+
+.small-caps {
+  text-transform: uppercase;
+  font-family: $ff-mono;
 }
 
 button {
-  font-size: $fs-header-small;
+  cursor: pointer;
+  font-size: $fs-default;
   font-family: $ff-sans;
-  background-color: $color-moab-orange;
+  background-color: $color-orange;
   border: none;
   padding: 16px 32px;
   border-radius: 4px;
   color: white;
   margin: 16px 0px;
+  transition: background-color 0.3s ease; 
+  &:hover {
+    background-color: $color-orange-hover;
+  }
 }
 
 // hero
