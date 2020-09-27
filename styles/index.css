@@ -38,6 +38,10 @@ body {
   border-bottom: 4px #ee7100 solid;
 }
 
+.selected {
+  border-bottom: 4px #ee7100 solid;
+}
+
 .nav-content {
   display: block;
   width: 90%;

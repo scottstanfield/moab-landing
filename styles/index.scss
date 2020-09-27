@@ -64,6 +64,10 @@ body {
   }
 }
 
+.selected {
+  border-bottom: 4px $color-orange solid;
+}
+
 .nav-content {
   display: block;
   width: 90%;
