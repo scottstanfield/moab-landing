@@ -5,8 +5,8 @@ $ff-serif: Georgia, serif;
 $ff-mono: 'IBM Plex Mono', mono;
 
 $fs-default: 18px;
-$fs-header-large: 60px;
-$fs-header-medium: 40px;
+$fs-header-large: 52px;
+$fs-header-medium: 34px;
 $fs-header-small: 26px;
 
 $fw-default: 400;
@@ -22,7 +22,8 @@ $color-default: #333333;
 $color-orange: #ee7100;
   $color-orange-hover: #d86602;
 $color-white: #ffffff;
-$color-link: blue;
+$color-link: rgb(50, 104, 145);
+$color-grey: #6d6d6d;
 
 // END Variables -----
 
@@ -40,18 +41,25 @@ body {
 
 .primary-container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.centered-container {
+  width: 100%;
+  text-align: center;
   margin: auto;
 }
 
 .medium-width-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 760px;
 }
 
 .nav {
   padding: 50px 0px 20px 0px;
   a {
+    color: $color-default;
     font-size: $fs-default;
     padding-bottom: 8px;
     margin-right: 32px;
@@ -106,6 +114,20 @@ h3 {
   margin: 8px 0;
 }
 
+p {
+  font-size: $fs-default;
+  line-height: $lh-tall;
+  margin: 8px 0;
+}
+
+a {
+  color: $color-link;
+  text-decoration-color: rgba(50, 104, 145, 0.3);
+  &:hover {
+    text-decoration-color: rgba(50, 104, 145, 0.6);
+  }
+}
+
 .small-caps {
   text-transform: uppercase;
   font-family: $ff-mono;
@@ -120,18 +142,62 @@ button {
   padding: 16px 32px;
   border-radius: 4px;
   color: white;
-  margin: 16px 0px;
+  margin: 26px 0px;
   transition: background-color 0.3s ease; 
   &:hover {
     background-color: $color-orange-hover;
   }
 }
 
+.flex {
+  justify-content: space-between;
+  max-width: 1200px;
+  display: flex;
+}
+
+.space-small {
+  margin: 16px 0px;
+}
+
+.space-medium {
+  margin: 32px 0px;
+}
+
+.space-large {
+  margin: 64px 0px;
+}
+
+.space-xlarge {
+  margin: 128px 0px;
+}
+
+
 // hero
 .hero-container {
+  position: relative;
+  padding: 16px;
+  max-width: 1200px;
+  height: 550px;
+  margin: auto;
+  background-color: #3b3b3b;
   text-align: center;
   margin-top: 80px;
   margin-bottom: 80px;
+  border-radius: 8px;
+  -webkit-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+  box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+
+  .hero-flex {
+    height: 400px;
+    width: 90%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 
   h1 {
     letter-spacing: -1px;
@@ -142,11 +208,140 @@ button {
     margin: auto;
   }
 
+  .hero-text {
+    position: relative;
+    height: 100%;
+    width: 46%;
+    text-align: left;
+    h1, h3 {
+      color: $color-white;
+    }
+  }
+
+  .absolute-text {
+    height: 280px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .hero-image {
+    width: 50%;
+    height: auto;
+    background-image: url('../moab-rendering-example.png');
+    background-size: contain;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+  }
+
   img {
     width: 100%;
     margin-top: 32px;
+    min-height: 100%;
     max-width: 800px;
     background-color: lightgrey;
     height: auto;
+  }
+}
+
+.full-width-image {
+  width: 100%;
+}
+
+.left-text {
+  width: 38%;
+}
+
+.right-bg-image {
+  cursor: pointer;
+  position: relative;
+  background-color: #eeeeee;
+  background-image: url('https://moab.imgix.net/dropbox/ASSETS/Photos%20&%20Video/Process%20Photos/071_CAD%20Design.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 55%;
+  border-radius: 8px;
+  -webkit-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+  box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+}
+
+.right-video-player {
+  position: relative;
+  cursor: pointer;
+  height: auto;
+  width: 55%;
+  video {
+    -webkit-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+    box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+    border-radius: 8px;
+  }
+
+}
+
+.play-button {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-image: url('../play-button.svg');
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.section-icon {
+  width: 3em;
+  margin: 8px 0px;
+}
+
+.tutorial-card-container {
+  cursor: pointer;
+  width: 32%;
+  height: auto;
+  min-height: 420px;
+  -webkit-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+  box-shadow: -2px 20px 70px -27px rgba(0,0,0,0.75);
+  border-radius: 8px;
+  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, box-shadow 150ms ease 0s;
+  &:hover {
+    transform: scale(1.02, 1.02);
+  }
+
+  .tutorial-card-content {
+    padding: 20px;
+    p {
+      color: $color-grey;
+    }
+  }
+
+  .tutorial-card-image {
+    background-color: $color-grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 180px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .tutorial-1 {
+    background-image: url('../moab-rendering-example.png');
+  }
+
+  .tutorial-2 {
+    background-image: url('https://moab.imgix.net/dropbox/ASSETS/Web%20site/homepage/tutorials-home.png');
+  }
+
+  .tutorial-3 {
+    background-image: url('https://moab.imgix.net/renderings/iso-dark.png');
   }
 }

@@ -5,10 +5,11 @@
   <script src="index.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body onload="simplePause()">
   <div class="nav">
     <div class="nav-content">
       <div class="nav-left">
@@ -20,18 +21,101 @@
       </div>
     </div>
   </div>
-  <div class="primary-container">
-    <div class="hero-container">
-      <h1>PROJECT MOAB</h1>
-      <h3>A Machine Teaching Hardware Kit for Autonomous Systems from Microsoft</h3>
-      <img id="compress" src="https://moab.imgix.net/heros/hero.tif?auto=compress,format&h=500" />
-    </div>
-    <div class="medium-width-container">
-      <h2>Motion Control, Simulation and Microsoft Bonsai</h2>
-      <h3>Balance using trained Bonsai brains, visualize them in simulation and deploy them to the physical bot.</h3>
-      <button class="small-caps">Explore autonomous systems</button>
+  <div class="hero-container">
+    <div class="flex hero-flex">
+      <div class="hero-text">
+        <div class="absolute-text">
+          <h1>Project Moab</h1>
+          <div class="space-small"></div>
+          <h3>A Machine Teaching Hardware Kit for Autonomous Systems from Microsoft.</h3>
+          <div class="space-small"></div>
+          <button class="small-caps">Order developer kit</button>
+        </div>
+      </div>
+      <div class="hero-image">
+      </div>
     </div>
   </div>
+  <div class="primary-container">
+    <img style="margin-top: -140px; margin-bottom: -140px;" class="full-width-image" src="moab-unboxed-sample.jpeg" />
+    <div class="centered-container medium-width-container">
+      <h2>Motion control & Simulation training, straight out of the box.</h2>
+      <h3>Balance using trained <a href="https://bons.ai">Bonsai brains</a>, visualize them in simulation and deploy
+        them to the
+        physical bot.</h3>
+      <button class="small-caps">Get started</button>
+    </div>
+
+    <div class="space-xlarge">
+
+      <div class="flex">
+        <div class="left-text">
+          <img class="section-icon" src="lock-icon.svg" />
+          <h2>Open-sourced, so you can tinker away.</h2>
+          <h3>Everything from the 3D Sketchfab Models to the hardware & OS are available to everyone.</h3>
+          <button class="small-caps">Explore 3D Model</button>
+        </div>
+        <!-- <div class="right-bg-image">
+        <div class="play-button"></div>
+      </div> -->
+        <div class="right-video-player">
+          <div id="play-button" class="play-button"></div>
+          <video id="simple-pause" width="100%" height="auto" autoplay>
+            <source
+              src="https://moab.imgix.net/dropbox/ASSETS/Photos%20&%20Video/Process%20Videos/Prototype%20V1%20-%20Design%20&%20Prototyping%20B-roll%20(1%20min).mp4"
+              type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="space-xlarge">
+
+        <div class="centered-container medium-width-container">
+          <img class="section-icon" src="tutorial-icon.svg" />
+          <h2>Tutorials & Set-up</h2>
+          <h3>You don't need the physical device to get started—you can play with a virtual Moab in the sim right now!
+          </h3>
+        </div>
+        <div class="space-large"></div>
+        <div class="flex">
+          <div class="tutorial-card-container">
+            <div class="tutorial-card-image tutorial-1"></div>
+            <div class="tutorial-card-content">
+              <h3>Balance a ball on a virtual Moab</h3>
+              <p>Get started with the Bonsai platform by learning how to teach an AI to balance a ball in the center of
+                the Moab bot's plate.</p>
+              <div class="space-small"></div>
+              <p class="small-caps">View tutorial &rarr;</p>
+            </div>
+
+          </div>
+          <div class="tutorial-card-container">
+            <div class="tutorial-card-image tutorial-2"></div>
+            <div class="tutorial-card-content">
+              <h3>Robust Balancing with Domain Randomization</h3>
+              <p>Learn to bridge the simulation-to-real-world gap by using Domain Randomization.</p>
+              <div class="space-small"></div>
+              <p class="small-caps">View tutorial &rarr;</p>
+            </div>
+
+          </div>
+          <div class="tutorial-card-container">
+            <div class="tutorial-3 tutorial-card-image"></div>
+            <div class="tutorial-card-content">
+              <h3>Avoid obstacles</h3>
+              <p>Go beyond single-objective controllers by teaching an AI to balance the ball in the center while
+                avoiding an obstacle.</p>
+              <div class="space-small"></div>
+              <p class="small-caps">View tutorial &rarr;</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="space-medium"></div>
+        <div class="centered-container">
+          <button class="small-caps">All tutorials</button>
+        </div>
+      </div>
 </body>
 
 </html>
