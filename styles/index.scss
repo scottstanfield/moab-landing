@@ -1,0 +1,102 @@
+// Variables
+// font-family, size, weight
+$ff-sans: Inter, system-ui, sans-serif, Arial;
+$ff-serif: Georgia;
+
+$fs-body: 16px;
+$fs-header-large: 60px;
+$fs-header-medium: 40px;
+$fs-header-small: 26px;
+
+$fw-default: 400;
+$fw-medium: 600;
+$fw-heavy: 800;
+
+// line-height
+$lh-default: 140%;
+$lh-tall: 160%;
+
+// colors
+$color-default: #333333;
+$color-moab-orange: #ee7100;
+$color-white: #ffffff;
+$color-link: blue;
+
+// END Variables -----
+
+// Layout
+body {
+  font-family: $ff-sans;
+  color: $color-default;
+  font-weight: $fw-default;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.medium-width-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+// Elements
+h1 {
+  font-size: $fs-header-large;
+  font-weight: $fw-heavy;
+  line-height: $lh-default;
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: $fs-header-medium;
+  font-weight: $fw-heavy;
+  line-height: $lh-default;
+  margin: 16px 0;
+}
+
+h3 {
+  font-size: $fs-header-small;
+  font-weight: $fw-default;
+  line-height: $lh-default;
+  margin: 16px 0;
+}
+
+button {
+  font-size: $fs-header-small;
+  font-family: $ff-sans;
+  background-color: $color-moab-orange;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 4px;
+  color: white;
+  margin: 16px 0px;
+}
+
+// hero
+.hero-container {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  h1 {
+    letter-spacing: -1px;
+  }
+
+  h3 {
+    max-width: 620px;
+    margin: auto;
+  }
+
+  img {
+    width: 100%;
+    margin-top: 32px;
+    max-width: 800px;
+    background-color: lightgrey;
+    height: auto;
+  }
+}
