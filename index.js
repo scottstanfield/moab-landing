@@ -1,4 +1,3 @@
-// Hello world!
 const imgixParams = (height) => `?auto=compress,format&h=${height || 700}`;
 let carouselCount = 0;
 let carouselInterval;

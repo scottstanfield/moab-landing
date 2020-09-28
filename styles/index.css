@@ -7,9 +7,11 @@ body {
   font-family: Inter, system-ui, sans-serif, Arial;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .primary-container {
+  text-align: left;
   width: 90%;
   max-width: 1200px;
   margin: auto;
@@ -78,7 +80,7 @@ body {
 .nav-content {
   display: block;
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -153,6 +155,11 @@ button:hover {
   background-color: #d86602;
 }
 
+.inline-icon {
+  height: 1em;
+  padding-right: 6px;
+}
+
 .hero-container {
   position: relative;
   padding: 16px;
@@ -169,6 +176,13 @@ button:hover {
 }
 
 .hero-container .hero-flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 400px;
   width: 90%;
   position: absolute;
@@ -218,6 +232,7 @@ button:hover {
 
 .full-width-image {
   width: 100%;
+  margin: -140px 0px;
 }
 
 .left-text {
@@ -241,8 +256,17 @@ button:hover {
 .right-video-player {
   position: relative;
   cursor: pointer;
-  height: auto;
-  width: 55%;
+  height: 350px;
+  width: 650px;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, -webkit-box-shadow 150ms ease 0s;
+  transition: -webkit-transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, -webkit-box-shadow 150ms ease 0s;
+  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, box-shadow 150ms ease 0s;
+  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, box-shadow 150ms ease 0s, -webkit-transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, -webkit-box-shadow 150ms ease 0s;
+}
+
+.right-video-player:hover {
+  -webkit-transform: scale(1.02, 1.02);
+          transform: scale(1.02, 1.02);
 }
 
 .right-video-player video {
@@ -270,6 +294,10 @@ button:hover {
 .section-icon {
   width: 3em;
   margin: 8px 0px;
+}
+
+.no-style-link {
+  text-decoration: none;
 }
 
 .tutorial-card-container {
@@ -341,8 +369,8 @@ button:hover {
 }
 
 .product-image {
-  width: 70%;
-  height: 500px;
+  width: 90%;
+  height: 600px;
   background-image: url("https://moab.imgix.net/topdown/m2.jpg?auto=compress,format&h=500");
   background-size: contain;
   background-repeat: no-repeat;
@@ -354,5 +382,93 @@ button:hover {
   height: 1em;
   background-color: #eeeeee;
   border-radius: 50%;
+}
+
+@media (max-width: 860px) {
+  .centered-container {
+    text-align: left;
+  }
+  .space-xlarge {
+    margin: 80px 0px;
+  }
+  .space-large {
+    margin: 40px 0px;
+  }
+  .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .left-text {
+    width: 100%;
+  }
+  .right-video-player {
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+  }
+  .hero-container .hero-flex {
+    margin-top: 30px;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .hero-container .hero-flex .hero-text {
+    width: 100%;
+  }
+  .hero-container .hero-flex .hero-image {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+  }
+  .full-width-image {
+    width: 140%;
+    margin: -80px 0px;
+    margin-left: -20%;
+  }
+  .tutorial-card-container {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .product-image {
+    width: 140%;
+    margin-left: -20%;
+  }
+  .list-toggles {
+    width: 200px;
+    margin: auto;
+  }
+  .flex-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .list-toggles p {
+    margin: 0px 0px;
+  }
+  .nav {
+    padding: 30px 0px 0px 0px;
+  }
+  .nav a {
+    font-size: 16px;
+  }
+  .nav a:last-of-type {
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 860px) and (max-width: 1100px) {
+  .right-video-player {
+    margin-top: 80px;
+    width: 500px;
+    height: 300px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

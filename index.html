@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="hero-container">
-    <div class="flex hero-flex">
+    <div class="hero-flex">
       <div class="hero-text">
         <div class="absolute-text">
           <h1>Project Moab</h1>
@@ -41,8 +41,7 @@
     </div>
   </div>
   <div class="primary-container">
-    <img style="margin-top: -140px; margin-bottom: -140px;" class="full-width-image"
-      src="images/moab-unboxed-sample.jpeg" />
+    <img class="full-width-image" src="images/moab-unboxed-sample.jpeg" />
     <div class="centered-container medium-width-container">
       <h2>Motion control & Simulation training, straight out of the box.</h2>
       <h3>Balance using trained <a href="https://bons.ai">Bonsai brains</a>, visualize them in simulation and deploy
@@ -58,7 +57,7 @@
           <img class="section-icon" src="images/lock-icon.svg" />
           <h2>Open-sourced, so you can tinker away.</h2>
           <h3>Everything from the 3D Sketchfab Models to the hardware & OS are available to everyone.</h3>
-          <button class="small-caps">Explore 3D Model</button>
+          <button class="small-caps mobile-hide">Explore 3D Model</button>
         </div>
         <div class="right-video-player">
           <div id="play-button" class="play-button"></div>
@@ -82,99 +81,97 @@
         <div class="space-large"></div>
 
         <div class="flex">
-          <div class="tutorial-card-container">
-            <div class="tutorial-card-image tutorial-1"></div>
-            <div class="tutorial-card-content">
-              <h3>Balance a ball on a virtual Moab</h3>
-              <p>Get started with the Bonsai platform by learning how to teach an AI to balance a ball in the center of
-                the Moab bot's plate.</p>
-              <div class="space-small"></div>
-              <p class="small-caps">View tutorial &rarr;</p>
-            </div>
+          <a class="no-style-link" href="/tutorials/balance.html">
+            <div class="tutorial-card-container">
+              <div class="tutorial-card-image tutorial-1"></div>
+              <div class="tutorial-card-content">
+                <h3>Balance a ball on a virtual Moab</h3>
+                <p>Get started with the Bonsai platform by learning how to teach an AI to balance a ball in the center
+                  of
+                  the Moab bot's plate.</p>
+                <div class="space-small"></div>
+                <p class="small-caps"><img class="inline-icon" src="images/github-icon.svg" />View tutorial &rarr;</p>
+              </div>
+          </a>
 
-          </div>
-          <div class="tutorial-card-container">
-            <div class="tutorial-card-image tutorial-2"></div>
-            <div class="tutorial-card-content">
-              <h3>Robust Balancing with Domain Randomization</h3>
-              <p>Learn to bridge the simulation-to-real-world gap by using Domain Randomization.</p>
-
-              <div class="space-small"></div>
-
-              <p class="small-caps">View tutorial &rarr;</p>
-            </div>
-
-          </div>
-          <div class="tutorial-card-container">
-            <div class="tutorial-3 tutorial-card-image"></div>
-            <div class="tutorial-card-content">
-              <h3>Avoid obstacles</h3>
-              <p>Go beyond single-objective controllers by teaching an AI to balance the ball in the center while
-                avoiding an obstacle.</p>
-
-              <div class="space-small"></div>
-
-              <p class="small-caps">View tutorial &rarr;</p>
-            </div>
-
-          </div>
         </div>
+        <div class="tutorial-card-container">
+          <div class="tutorial-card-image tutorial-2"></div>
+          <div class="tutorial-card-content">
+            <h3>Robust Balancing with Domain Randomization</h3>
+            <p>Learn to bridge the simulation-to-real-world gap by using Domain Randomization.</p>
 
-        <div class="space-medium"></div>
+            <div class="space-small"></div>
 
-        <div class="centered-container">
-          <button class="small-caps">All tutorials</button>
+            <p class="small-caps">View tutorial &rarr;</p>
+          </div>
+
         </div>
+        <div class="tutorial-card-container">
+          <div class="tutorial-3 tutorial-card-image"></div>
+          <div class="tutorial-card-content">
+            <h3>Avoid obstacles</h3>
+            <p>Go beyond single-objective controllers by teaching an AI to balance the ball in the center while
+              avoiding an obstacle.</p>
+
+            <div class="space-small"></div>
+
+            <p class="small-caps">View tutorial &rarr;</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="space-xlarge"></div>
+
+      <div class="centered-container medium-width-container">
+        <img class="section-icon" src="images/features-icon.svg" />
+        <h2>Features</h2>
+        <h3>A variety of sensors and components are used to balance objects on Moab. Check 'em out:
+        </h3>
 
         <div class="space-large"></div>
 
-        <div class="centered-container medium-width-container">
-          <img class="section-icon" src="images/features-icon.svg" />
-          <h2>Features</h2>
-          <h3>A variety of sensors and components are used to balance objects on Moab. Check 'em out:
-          </h3>
-
-          <div class="space-large"></div>
-
-          <div class="flex">
-            <div class="left-text">
-              <div class="small-caps list-toggles">
-                <div>
-                  <div id="circle-0" class="selected-circle"></div>
-                  <p id="toggle-0" onclick="directlyToggleCarousel(0)">Camera Module</p>
-                </div>
-                <div>
-                  <div id="circle-1" class="selected-circle"></div>
-                  <p id="toggle-1" onclick="directlyToggleCarousel(1)">Raspberry Pi</p>
-                </div>
-                <div>
-                  <div id="circle-2" class="selected-circle"></div>
-                  <p id="toggle-2" onclick="directlyToggleCarousel(2)">Control Arms</p>
-                </div>
-                <div>
-                  <div id="circle-3" class="selected-circle"></div>
-                  <p id="toggle-3" onclick="directlyToggleCarousel(3)">Powerboard</p>
-                </div>
-                <div>
-                  <div id="circle-4" class="selected-circle"></div>
-                  <p id="toggle-4" onclick="directlyToggleCarousel(4)">Servos</p>
-                </div>
+        <div class="flex flex-reverse">
+          <div class="left-text">
+            <div class="small-caps list-toggles">
+              <div>
+                <div id="circle-0" class="selected-circle"></div>
+                <p id="toggle-0" onclick="directlyToggleCarousel(0)">Camera Module</p>
+              </div>
+              <div>
+                <div id="circle-1" class="selected-circle"></div>
+                <p id="toggle-1" onclick="directlyToggleCarousel(1)">Raspberry Pi</p>
+              </div>
+              <div>
+                <div id="circle-2" class="selected-circle"></div>
+                <p id="toggle-2" onclick="directlyToggleCarousel(2)">Control Arms</p>
+              </div>
+              <div>
+                <div id="circle-3" class="selected-circle"></div>
+                <p id="toggle-3" onclick="directlyToggleCarousel(3)">Powerboard</p>
+              </div>
+              <div>
+                <div id="circle-4" class="selected-circle"></div>
+                <p id="toggle-4" onclick="directlyToggleCarousel(4)">Servos</p>
               </div>
             </div>
-            <div id="carousel" class="product-image">
-            </div>
           </div>
-
-          <div class="space-large"></div>
-          <div class="centered-container medium-width-container">
-            <img class="section-icon" src="images/notification-icon.svg" />
-            <h2>Stay in the know</h2>
-            <h3>Sign up to be the first to know when Moab is available!
-            </h3>
-            <button class="small-caps">Sign up</button>
+          <div id="carousel" class="product-image">
           </div>
         </div>
+
+        <div class="space-xlarge"></div>
+
+        <div class="centered-container medium-width-container">
+          <img class="section-icon" src="images/notification-icon.svg" />
+          <h2>Stay in the know</h2>
+          <h3>Sign up to be the first to know when Moab is available!
+          </h3>
+          <button class="small-caps">Sign up</button>
+        </div>
       </div>
+    </div>
 </body>
 
 </html>

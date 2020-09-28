@@ -40,9 +40,11 @@ body {
   font-family: $ff-sans;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .primary-container {
+  text-align: left;
   width: 90%;
   max-width: 1200px;
   margin: auto;
@@ -104,7 +106,7 @@ body {
 .nav-content {
   display: block;
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -177,6 +179,10 @@ button {
   }
 }
 
+.inline-icon {
+  height: 1em;
+  padding-right: 6px;
+}
 
 // hero
 .hero-container {
@@ -195,6 +201,9 @@ button {
   box-shadow: $bs-default;
 
   .hero-flex {
+    justify-content: space-between;
+    max-width: 1200px;
+    display: flex;
     height: 400px;
     width: 90%;
     position: absolute;
@@ -244,6 +253,7 @@ button {
 
 .full-width-image {
   width: 100%;
+  margin: -140px 0px;
 }
 
 .left-text {
@@ -268,8 +278,12 @@ button {
 .right-video-player {
   position: relative;
   cursor: pointer;
-  height: auto;
-  width: 55%;
+  height: 350px;
+  width: 650px;
+  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, box-shadow 150ms ease 0s;
+  &:hover {
+    transform: scale(1.02, 1.02);
+  }
   video {
     -webkit-box-shadow: $bs-default;
     -moz-box-shadow: $bs-default;
@@ -297,6 +311,10 @@ button {
 .section-icon {
   width: 3em;
   margin: 8px 0px;
+}
+
+.no-style-link {
+  text-decoration: none;
 }
 
 .tutorial-card-container {
@@ -359,8 +377,8 @@ button {
 }
 
 .product-image {
-  width: 70%;
-  height: 500px;
+  width: 90%;
+  height: 600px;
   background-image: url('https://moab.imgix.net/topdown/m2.jpg?auto=compress,format&h=500');
   background-size: contain;
   background-repeat: no-repeat;
@@ -372,4 +390,106 @@ button {
   height: 1em;
   background-color: #eeeeee;
   border-radius: 50%;
+}
+
+@media (max-width: 860px) {
+  .centered-container {
+    text-align: left;
+  }
+
+  .space-xlarge {
+    margin: 80px 0px;
+  }
+
+  .space-large {
+    margin: 40px 0px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .left-text {
+    width: 100%;
+  }
+
+  .right-video-player {
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-container .hero-flex {
+    margin-top: 30px;
+    position: relative;
+    flex-direction: column-reverse;
+
+    .hero-text {
+      width: 100%;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .full-width-image {
+    width: 140%;
+    margin: -80px 0px;
+    margin-left: -20%;
+  }
+
+  .tutorial-card-container {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .product-image {
+    width: 140%;
+    margin-left: -20%;
+  }
+
+  .list-toggles {
+    width: 200px;
+    margin: auto;
+  }
+
+  .flex-reverse {
+    flex-direction: column-reverse; 
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .list-toggles p {
+    margin: 0px 0px;
+  }
+
+  .nav {
+    padding: 30px 0px 0px 0px;
+    a {
+      font-size: 16px;
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+
+  }
+}
+
+// Special edge case for video player
+@media (min-width: 860px) and (max-width: 1100px) {
+  .right-video-player {
+    margin-top: 80px;
+    width: 500px;
+    height: 300px;
+  }
+}
+
+// mobile
+@media (max-width: 480px) {
+  
 }
