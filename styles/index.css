@@ -98,11 +98,11 @@ footer img {
 }
 
 .nav a:hover {
-  border-bottom: 4px #ee7100 solid;
+  border-bottom: 4px #e66d00 solid;
 }
 
 .selected {
-  border-bottom: 4px #ee7100 solid;
+  border-bottom: 4px #e66d00 solid;
 }
 
 .nav-content {
@@ -169,7 +169,7 @@ button {
   cursor: pointer;
   font-size: 18px;
   font-family: Inter, system-ui, sans-serif, Arial;
-  background-color: #ee7100;
+  background-color: #e66d00;
   border: none;
   padding: 16px 32px;
   border-radius: 4px;
