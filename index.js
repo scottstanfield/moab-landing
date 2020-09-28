@@ -75,6 +75,5 @@ const setToggleToOrange = (idToToggle) => {
 }
 
 const onLoadFns = () => {
-  simplePause();
   carouselInterval = setInterval(() => toggleCarousel(), 3000);
 }

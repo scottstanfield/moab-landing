@@ -31,6 +31,10 @@ $bs-default: -2px 20px 70px -27px rgba(0,0,0,0.75);
 // END Variables -----
 
 // Layout
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   color: $color-default;
   font-weight: $fw-default;
@@ -319,7 +323,7 @@ button {
 
 .tutorial-card-container {
   cursor: pointer;
-  width: 32%;
+  width: 30%;
   height: auto;
   min-height: 420px;
   -webkit-box-shadow: $bs-default;
@@ -367,7 +371,7 @@ button {
     cursor: pointer;
     position: relative;
     padding: 4px 0px;
-    margin: 16px 0px;
+    margin: 8px 0px;
     transition: all 0.2s ease-in-out;
     transition-property: color, background-color;
     &:hover {
@@ -377,8 +381,9 @@ button {
 }
 
 .product-image {
-  width: 90%;
+  width: 80%;
   height: 600px;
+  margin-top: -40px;
   background-image: url('https://moab.imgix.net/topdown/m2.jpg?auto=compress,format&h=500');
   background-size: contain;
   background-repeat: no-repeat;
@@ -442,7 +447,7 @@ button {
 
   .tutorial-card-container {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
 
   .product-image {
