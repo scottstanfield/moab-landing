@@ -204,7 +204,7 @@ button {
     right: 0;
     left: 0;
   }
-  
+
   .hero-text {
     position: relative;
     height: 100%;
@@ -340,4 +340,36 @@ button {
   .tutorial-3 {
     background-image: url('https://moab.imgix.net/renderings/iso-dark.png');
   }
+}
+
+.list-toggles {
+  text-align: left;
+  p {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 4px 0px;
+    margin: 16px 0px;
+    transition: all 0.2s ease-in-out;
+    transition-property: color, background-color;
+    &:hover {
+      color: $color-orange-hover;
+    }
+  }
+}
+
+.product-image {
+  width: 70%;
+  height: 500px;
+  background-image: url('https://moab.imgix.net/topdown/m2.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.selected-circle {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: #eeeeee;
+  border-radius: 50%;
 }
