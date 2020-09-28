@@ -334,11 +334,11 @@ button {
   }
 
   .tutorial-2 {
-    background-image: url('https://moab.imgix.net/dropbox/ASSETS/Web%20site/homepage/tutorials-home.png');
+    background-image: url('https://moab.imgix.net/dropbox/ASSETS/Web%20site/homepage/tutorials-home.png?auto=compress,format&h=300');
   }
 
   .tutorial-3 {
-    background-image: url('https://moab.imgix.net/renderings/iso-dark.png');
+    background-image: url('https://moab.imgix.net/renderings/iso-dark.png?auto=compress,format&h=300');
   }
 }
 
@@ -361,7 +361,7 @@ button {
 .product-image {
   width: 70%;
   height: 500px;
-  background-image: url('https://moab.imgix.net/topdown/m2.jpg');
+  background-image: url('https://moab.imgix.net/topdown/m2.jpg?auto=compress,format&h=500');
   background-size: contain;
   background-repeat: no-repeat;
 }
