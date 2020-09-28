@@ -2,7 +2,7 @@
 // font-family, size, weight
 $ff-sans: Inter, system-ui, sans-serif, Arial;
 $ff-serif: Georgia, serif;
-$ff-mono: 'IBM Plex Mono', mono;
+$ff-mono: 'IBM Plex Mono', system-ui, mono;
 
 $fs-default: 18px;
 $fs-header-large: 52px;
@@ -182,7 +182,9 @@ button {
 }
 
 .inline-icon {
-  height: 1em;
+  height: 1em !important;
+  width: 1em !important;
+  background-color: transparent !important;
   padding-right: 6px;
 }
 
@@ -227,7 +229,7 @@ button {
   }
 
   .absolute-text {
-    height: 280px;
+    height: 350px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -282,10 +284,6 @@ button {
   cursor: pointer;
   height: 350px;
   width: 650px;
-  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, box-shadow 150ms ease 0s;
-  &:hover {
-    transform: scale(1.02, 1.02);
-  }
   video {
     -webkit-box-shadow: $bs-default;
     -moz-box-shadow: $bs-default;
@@ -473,7 +471,7 @@ button {
     padding: 30px 0px 0px 0px;
     a {
       margin-right: 16px;
-      font-size: 16px;
+      font-size: 14px;
       &:last-of-type {
         margin-right: 0px;
       }
