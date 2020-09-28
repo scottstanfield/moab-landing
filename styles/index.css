@@ -121,7 +121,7 @@ footer img {
 }
 
 h1 {
-  font-family: "IBM Plex Mono", system-ui, mono;
+  font-family: Inter, system-ui, sans-serif, Arial;
   font-size: 52px;
   font-weight: 800;
   line-height: 130%;
@@ -240,6 +240,12 @@ button:hover {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+.hero-container .absolute-text h2 {
+  font-size: 26px;
+  font-weight: 400;
+  color: white;
 }
 
 .hero-container .hero-image {

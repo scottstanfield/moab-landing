@@ -146,7 +146,7 @@ footer {
 
 // Primary elements
 h1 {
-  font-family: $ff-mono;
+  font-family: $ff-sans;
   font-size: $fs-header-large;
   font-weight: $fw-heavy;
   line-height: $lh-default;
@@ -258,6 +258,11 @@ button {
     top: 0;
     bottom: 0;
     margin: auto;
+    h2 {
+      font-size: $fs-header-small;
+      font-weight: $fw-default;
+      color: white;
+    }
   }
 
   .hero-image {
