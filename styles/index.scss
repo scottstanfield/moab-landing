@@ -56,6 +56,10 @@ body {
   margin: auto;
 }
 
+.centered {
+  text-align: center;
+}
+
 .centered-container {
   width: 100%;
   text-align: center;
@@ -75,9 +79,19 @@ body {
 
 footer {
   margin-top: -160px;
+  padding-top: 60px;
   width: 100%;
   height: 300px;
   background-color: $color-default;
+  p {
+    opacity: 0.5;
+    color: white;
+  }
+  img {
+    opacity: 0.5;
+    margin-top: 20px;
+    width: 180px;
+  }
 }
 
 .space-small {
@@ -433,6 +447,7 @@ video {
   }
 
   .hero-container .hero-flex {
+    border-radius: 0px;
     margin-top: 30px;
     position: relative;
     flex-direction: column-reverse;
@@ -444,7 +459,7 @@ video {
     .hero-image {
       width: 100%;
       height: 500px;
-      margin-bottom: 60px;
+      margin-bottom: 120px;
     }
   }
 
@@ -542,6 +557,7 @@ video {
   }
 
   .hero-container {
+    border-radius: 0px;
     height: auto;
     max-height: 550px;
   }
