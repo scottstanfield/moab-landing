@@ -263,7 +263,7 @@ button {
   .hero-image {
     width: 50%;
     height: auto;
-    background-image: url('../images/moab-rendering-example.png');
+    background-image: url('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=600');
     background-size: contain;
     background-position-y: 30%;
     background-repeat: no-repeat;
@@ -374,7 +374,7 @@ video {
   }
 
   .tutorial-1 {
-    background-image: url('../images/moab-rendering-example.png');
+    background-image: url('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=300');
   }
 
   .tutorial-2 {
