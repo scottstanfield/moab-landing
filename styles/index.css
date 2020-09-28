@@ -56,12 +56,12 @@ footer {
 }
 
 footer p {
-  opacity: 0.5;
+  opacity: 0.8;
   color: white;
 }
 
 footer img {
-  opacity: 0.5;
+  opacity: 0.8;
   margin-top: 20px;
   width: 180px;
 }
