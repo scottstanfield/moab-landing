@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body onload="simplePause()">
+<body onload="onLoadFns()">
   <div class="nav">
     <div class="nav-content">
       <div class="nav-left">
@@ -62,7 +62,7 @@
         </div>
         <div class="right-video-player">
           <div id="play-button" class="play-button"></div>
-          <video id="simple-pause" width="100%" height="auto" autoplay>
+          <video id="simple-pause" width="100%" height="auto">
             <source
               src="https://moab.imgix.net/dropbox/ASSETS/Photos%20&%20Video/Process%20Videos/Prototype%20V1%20-%20Design%20&%20Prototyping%20B-roll%20(1%20min).mp4"
               type="video/mp4">
@@ -124,6 +124,55 @@
 
         <div class="centered-container">
           <button class="small-caps">All tutorials</button>
+        </div>
+
+        <div class="space-large"></div>
+
+        <div class="centered-container medium-width-container">
+          <img class="section-icon" src="images/features-icon.svg" />
+          <h2>Features</h2>
+          <h3>A variety of sensors and components are used to balance objects on Moab. Check 'em out:
+          </h3>
+
+          <div class="space-large"></div>
+
+          <div class="flex">
+            <div class="left-text">
+              <div class="small-caps list-toggles">
+                <div>
+                  <div id="circle-0" class="selected-circle"></div>
+                  <p id="toggle-0" onclick="directlyToggleCarousel(0)">Camera Module</p>
+                </div>
+                <div>
+                  <div id="circle-1" class="selected-circle"></div>
+                  <p id="toggle-1" onclick="directlyToggleCarousel(1)">Raspberry Pi</p>
+                </div>
+                <div>
+                  <div id="circle-2" class="selected-circle"></div>
+                  <p id="toggle-2" onclick="directlyToggleCarousel(2)">Control Arms</p>
+                </div>
+                <div>
+                  <div id="circle-3" class="selected-circle"></div>
+                  <p id="toggle-3" onclick="directlyToggleCarousel(3)">Powerboard</p>
+                </div>
+                <div>
+                  <div id="circle-4" class="selected-circle"></div>
+                  <p id="toggle-4" onclick="directlyToggleCarousel(4)">Servos</p>
+                </div>
+              </div>
+            </div>
+            <div id="carousel" class="product-image">
+            </div>
+          </div>
+
+          <div class="space-large"></div>
+          <div class="centered-container medium-width-container">
+            <img class="section-icon" src="images/notification-icon.svg" />
+            <h2>Stay in the know</h2>
+            <h3>Sign up to be the first to know when Moab is available!
+            </h3>
+            <button class="small-caps">Sign up</button>
+          </div>
         </div>
       </div>
 </body>

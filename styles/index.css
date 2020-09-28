@@ -319,4 +319,40 @@ button:hover {
 .tutorial-card-container .tutorial-3 {
   background-image: url("https://moab.imgix.net/renderings/iso-dark.png");
 }
+
+.list-toggles {
+  text-align: left;
+}
+
+.list-toggles p {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding: 4px 0px;
+  margin: 16px 0px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+
+.list-toggles p:hover {
+  color: #d86602;
+}
+
+.product-image {
+  width: 70%;
+  height: 500px;
+  background-image: url("https://moab.imgix.net/topdown/m2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.selected-circle {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: #eeeeee;
+  border-radius: 50%;
+}
 /*# sourceMappingURL=index.css.map */
