@@ -27,7 +27,25 @@ $color-grey: #6d6d6d;
 
 // box-shadows  
 $bs-default: -2px 20px 70px -27px rgba(0,0,0,0.75);
-// END Variables -----
+// END Variables
+
+// Mixins
+// Vertical and horizontal center positioning
+@mixin vh-positioning {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+@mixin bg-image($url, $size: contain) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+// END Mixins
 
 // Layout
 html {
@@ -70,22 +88,6 @@ body {
   display: flex;
 }
 
-footer {
-  padding-top: 60px;
-  width: 100%;
-  height: 300px;
-  background-color: $color-default;
-  p {
-    opacity: 0.8;
-    color: white;
-  }
-  img {
-    opacity: 0.8;
-    margin-top: 20px;
-    width: 180px;
-  }
-}
-
 .space-small {
   margin: 16px 0px;
 }
@@ -102,6 +104,84 @@ footer {
   margin: 128px 0px;
 }
 
+// -- END LAYOUT
+
+// Primary elements
+h1, h2, h3 {
+  line-height: $lh-default;
+  margin: 8px 0;
+}
+
+h1 {
+  font-size: $fs-header-large;
+  font-weight: $fw-heavy;
+}
+
+h2 {
+  font-size: $fs-header-medium;
+  font-weight: $fw-heavy;
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: $fs-header-small;
+  font-weight: $fw-default;
+  margin: 8px 0;
+}
+
+p {
+  line-height: $lh-tall;
+  margin: 8px 0;
+}
+
+a {
+  color: $color-link;
+  text-decoration-color: rgba(50, 104, 145, 0.3);
+  &:hover {
+    text-decoration-color: rgba(50, 104, 145, 0.6);
+  }
+}
+
+button {
+  cursor: pointer;
+  font-size: $fs-default;
+  font-family: $ff-sans;
+  background-color: $color-orange;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 4px;
+  color: black; // required for accessibility purposes (high contrast)
+  margin: 26px 0px;
+  transition: background-color 0.3s ease; 
+  &:hover {
+    background-color: $color-orange-hover;
+  }
+}
+
+video {
+  box-shadow: $bs-default;
+  border-radius: 8px;
+}
+
+footer {
+  padding-top: 60px;
+  width: 100%;
+  height: 300px;
+  background-color: $color-default;
+  p {
+    opacity: 0.8;
+    color: white;
+  }
+  img {
+    opacity: 0.8;
+    margin-top: 20px;
+    width: 180px;
+  }
+}
+
+// -- END Primary elements
+
+// Navigation
 .nav {
   padding: 50px 0px 20px 0px;
   a {
@@ -136,73 +216,13 @@ footer {
   float: right;
 }
 
-// Primary elements
-h1, h2, h3 {
-  line-height: $lh-default;
-  margin: 8px 0;
-}
-h1 {
-  font-family: $ff-sans;
-  font-size: $fs-header-large;
-  font-weight: $fw-heavy;
-}
-
-h2 {
-  font-size: $fs-header-medium;
-  font-weight: $fw-heavy;
-  margin: 8px 0;
-}
-
-h3 {
-  font-size: $fs-header-small;
-  font-weight: $fw-default;
-  margin: 8px 0;
-}
-
-p {
-  line-height: $lh-tall;
-  margin: 8px 0;
-}
-
-a {
-  color: $color-link;
-  text-decoration-color: rgba(50, 104, 145, 0.3);
-  &:hover {
-    text-decoration-color: rgba(50, 104, 145, 0.6);
-  }
-}
-
-// -- END Primary elements
-
 .small-caps {
   text-transform: uppercase;
   font-family: $ff-mono;
 }
+// -- END NAVIGATION
 
-button {
-  cursor: pointer;
-  font-size: $fs-default;
-  font-family: $ff-sans;
-  background-color: $color-orange;
-  border: none;
-  padding: 16px 32px;
-  border-radius: 4px;
-  color: black; // required for accessibility purposes (high contrast)
-  margin: 26px 0px;
-  transition: background-color 0.3s ease; 
-  &:hover {
-    background-color: $color-orange-hover;
-  }
-}
-
-.inline-icon {
-  height: 1em !important;
-  width: 1em !important;
-  background-color: transparent !important;
-  padding-right: 6px;
-}
-
-// hero
+// Hero
 .hero-container {
   position: relative;
   padding: 16px;
@@ -218,16 +238,10 @@ button {
 
   .hero-flex {
     justify-content: space-between;
-    max-width: 1200px;
     display: flex;
     height: 400px;
     width: 90%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    @include vh-positioning;
   }
 
   .hero-text {
@@ -242,9 +256,7 @@ button {
 
   .absolute-text {
     height: 350px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    @include vh-positioning;
     margin: auto;
     h2 {
       font-size: $fs-header-small;
@@ -256,10 +268,8 @@ button {
   .hero-image {
     width: 50%;
     height: auto;
-    background-image: url('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=600');
-    background-size: contain;
+    @include bg-image('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=600');
     background-position-y: 30%;
-    background-repeat: no-repeat;
   }
 
   img {
@@ -272,6 +282,15 @@ button {
   }
 }
 
+.inline-icon {
+  height: 1em !important;
+  width: 1em !important;
+  background-color: transparent !important;
+  padding-right: 6px;
+}
+// -- END HERO
+
+// Accomodates large shadow on moab-unboxed image
 .full-width-image {
   width: 100%;
   margin: -140px 0px;
@@ -281,13 +300,7 @@ button {
   width: 40%;
 }
 
-video {
-  box-shadow: $bs-default;
-  border-radius: 8px;
-}
-
 .right-video-player {
-  position: relative;
   cursor: pointer;
   height: 350px;
   margin-top: 20px;
@@ -300,19 +313,38 @@ video {
 }
 
 .no-style-link {
+  color: inherit;
   text-decoration: none;
 }
 
 .tutorial-card-container {
   cursor: pointer;
-  width: 30%;
+  width: 31%;
   height: auto;
   min-height: 420px;
   box-shadow: $bs-default;
   border-radius: 8px;
-  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s, box-shadow 150ms ease 0s;
+  transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
   &:hover {
     transform: scale(1.02, 1.02);
+  }
+
+  .tutorial-card-image {
+    height: 180px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .tutorial-1 {
+    @include bg-image('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=300', cover);
+  }
+
+  .tutorial-2 {
+    @include bg-image('https://moab.imgix.net/dropbox/ASSETS/Web%20site/homepage/tutorials-home.png?auto=compress,format&h=300', cover);
+  }
+
+  .tutorial-3 {
+    @include bg-image('https://moab.imgix.net/renderings/iso-dark.png?auto=compress,format&h=300', cover);
   }
 
   .tutorial-card-content {
@@ -322,26 +354,7 @@ video {
     }
   }
 
-  .tutorial-card-image {
-    background-color: $color-grey;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 180px;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-  }
 
-  .tutorial-1 {
-    background-image: url('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=300');
-  }
-
-  .tutorial-2 {
-    background-image: url('https://moab.imgix.net/dropbox/ASSETS/Web%20site/homepage/tutorials-home.png?auto=compress,format&h=300');
-  }
-
-  .tutorial-3 {
-    background-image: url('https://moab.imgix.net/renderings/iso-dark.png?auto=compress,format&h=300');
-  }
 }
 
 .list-toggles {
@@ -352,7 +365,7 @@ video {
     position: relative;
     padding: 4px 0px;
     margin: 8px 0px;
-    transition: all 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
     transition-property: color, background-color;
     &:hover {
       color: $color-orange-hover;
@@ -363,10 +376,8 @@ video {
 .product-image {
   width: 80%;
   height: 600px;
-  margin-top: -40px;
-  background-image: url('https://moab.imgix.net/topdown/m2.jpg?auto=compress,format&h=500');
-  background-size: contain;
-  background-repeat: no-repeat;
+  margin-top: -40px; // product images have extra white space, so pulling the image up slightly
+  @include bg-image('https://moab.imgix.net/topdown/m2.jpg?auto=compress,format&h=500');
 }
 
 .selected-circle {
@@ -438,6 +449,7 @@ video {
     margin: auto;
   }
 
+  // Controls stacking order for Features section
   .flex-reverse {
     flex-direction: column-reverse; 
   }
@@ -454,7 +466,6 @@ video {
     padding: 30px 0px 0px 0px;
     a {
       margin-right: 16px;
-      font-size: 14px;
       &:last-of-type {
         margin-right: 0px;
       }
@@ -511,7 +522,6 @@ video {
   .hero-container {
     border-radius: 0px;
     height: auto;
-    max-height: 550px;
   }
 
   .product-image {
