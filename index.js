@@ -1,3 +1,4 @@
+const imgixUrl = 'https://moab.imgix.net';
 const imgixParams = (height) => `?auto=compress,format&h=${height || 700}`;
 let carouselCount = 0;
 let carouselInterval;
@@ -10,22 +11,22 @@ const toggleCarousel = () => {
   setToggleToOrange(carouselCount);
   switch (carouselCount) {
     case 0:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/camera-module.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/camera-module.jpg${imgixParams()}')`;
       break;
     case 1:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/raspberry-pi-4.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/raspberry-pi-4.jpg${imgixParams()}')`;
       break;
     case 2:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/control-arms.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/control-arms.jpg${imgixParams()}')`;
       break;
     case 3:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/power-control-board.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/power-control-board.jpg${imgixParams()}')`;
       break;
     case 4:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/servos.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/servos.jpg${imgixParams()}')`;
       break;
     default:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/m2.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/m2.jpg${imgixParams()}')`;
       break;
   }
   carouselCount++;
@@ -40,22 +41,22 @@ const directlyToggleCarousel = (id) => {
   setToggleToOrange(id);
   switch (id) {
     case 0:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/camera-module.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/camera-module.jpg${imgixParams()}')`;
       break;
     case 1:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/raspberry-pi-4.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/raspberry-pi-4.jpg${imgixParams()}')`;
       break;
     case 2:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/control-arms.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/control-arms.jpg${imgixParams()}')`;
       break;
     case 3:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/power-control-board.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/power-control-board.jpg${imgixParams()}')`;
       break;
     case 4:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/servos.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/servos.jpg${imgixParams()}')`;
       break;
     default:
-      carousel.style.backgroundImage = `url('https://moab.imgix.net/topdown/m2.jpg${imgixParams()}')`;
+      carousel.style.backgroundImage = `url('${imgixUrl}/topdown/m2.jpg${imgixParams()}')`;
       break;
   }
 }
