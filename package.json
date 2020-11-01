@@ -1,0 +1,31 @@
+{
+  "name": "moab-home-page",
+  "version": "2.0.0",
+  "description": "Home page for Project Moab",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm run clean -s && mkdir dist",
+    "build": "npm run build:styles -s && npm run build:markup -s",
+    "build:markup": "pug --pretty src/*.pug -obj assets.json -o dist",
+    "build:styles": "sass src/main.scss dist/main.css && hashmark -s -l 4 -m assets.json dist/main.css \"dist/{name}.{hash}{ext}\"",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottstanfield/moab-landing.git"
+  },
+  "keywords": [
+    "robots"
+  ],
+  "author": "Scott Stanfield <scott.stanfield@microsoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottstanfield/moab-landing/issues"
+  },
+  "homepage": "https://github.com/scottstanfield/moab-landing#readme",
+  "devDependencies": {
+    "hashmark": "^5.0.0",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
