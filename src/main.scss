@@ -18,15 +18,15 @@ $lh-default: 130%;
 $lh-tall: 160%;
 
 // colors
-$color-default: #333333;
+$color-default: #333;
 $color-orange: #ee7100;
-  $color-orange-hover: #d86602;
-$color-white: #ffffff;
+$color-orange-hover: #d86602;
+$color-white: #fff;
 $color-link: rgb(50, 104, 145);
 $color-grey: #6d6d6d;
 
 // box-shadows  
-$bs-default: -2px 20px 70px -27px rgba(0,0,0,0.75);
+$bs-default: -2px 20px 70px -27px rgba(0, 0, 0, 0.75);
 // END Variables
 
 // Mixins

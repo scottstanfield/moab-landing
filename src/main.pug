@@ -1,9 +1,15 @@
 doctype html
 html(lang='en')
     head
+        meta(charset="utf-8")
         title Moab
+        include includes/head
+        link(rel="stylesheet" href="main.css")
+        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap",rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap",rel="stylesheet")
     body
         h1 Pug examples
         div.container
-            p Cool pug bro!
-            p #{locals['dist/main.css']}
+            p Cool pug #{name}
+            p foo: #{foo}
+            p #{"dist/main.css"}
