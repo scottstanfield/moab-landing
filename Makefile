@@ -4,17 +4,17 @@
 all: dist/main.html dist/main.css
 
 dist: node_modules
-	-mkdir dist
+	-mkdir -p dist
 
-dist/main.html: src/main.pug dist
+dist/main.html: src/main.pug
 	npx pug --pretty src/*.pug -o dist
 
 # package.json installs sass but if you're on macOS
 # brew install sass will install a much faster version
 #
 dist/main.css: src/main.scss
-	sass $< $@					# faster version
-	@# npx sass $< $@			# node version
+	@#sass $< $@					# faster version
+	npx sass $< $@			# node version
 
 node_modules: package.json
 	@echo "Installing node packages"
