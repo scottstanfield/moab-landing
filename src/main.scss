@@ -1,7 +1,7 @@
 // Variables
 // font-family, size, weight
-$ff-sans: Inter, system-ui, sans-serif, Arial;
-$ff-serif: Georgia, serif;
+$ff-sans: inter, system-ui, sans-serif, arial;
+$ff-serif: georgia, serif;
 $ff-mono: 'IBM Plex Mono', system-ui, mono;
 
 $fs-default: 18px;
@@ -25,9 +25,8 @@ $color-white: #fff;
 $color-link: rgb(50, 104, 145);
 $color-grey: #6d6d6d;
 
-// box-shadows  
+// box-shadows
 $bs-default: -2px 20px 70px -27px rgba(0, 0, 0, 0.75);
-// END Variables
 
 // Mixins
 // Vertical and horizontal center positioning
@@ -45,7 +44,6 @@ $bs-default: -2px 20px 70px -27px rgba(0, 0, 0, 0.75);
   background-repeat: no-repeat;
   background-size: $size;
 }
-// END Mixins
 
 // Layout
 html {
@@ -397,11 +395,11 @@ footer {
 // Media Queries
 @media (max-width: 860px) {
   .space-xlarge {
-    margin: 80px 0px;
+    margin: 80px 0;
   }
 
   .space-large {
-    margin: 40px 0px;
+    margin: 40px 0;
   }
 
   .flex {
