@@ -32,11 +32,11 @@ $bs-default: -2px 20px 70px -27px rgba(0, 0, 0, 0.75);
 // Vertical and horizontal center positioning
 @mixin vh-positioning {
   position: absolute;
-  margin: auto;
   top: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   left: 0;
+  margin: auto;
 }
 
 @mixin bg-image($url, $size: contain) {
@@ -48,31 +48,33 @@ $bs-default: -2px 20px 70px -27px rgba(0, 0, 0, 0.75);
 // Layout
 html {
   font-size: $fs-default;
-  scroll-behavior: smooth;
-  color: $color-default;
   font-weight: $fw-default;
+  color: $color-default;
+  scroll-behavior: smooth;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: $ff-sans;
   padding: 0;
   margin: 0;
   overflow-x: hidden !important;
+  font-family: $ff-sans;
+  
+  // https://responsivedesign.is/articles/font-smoothing/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .primary-container {
-  text-align: left;
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  text-align: left;
 }
 
 .centered-container {
   width: 100%;
-  text-align: center;
   margin: auto;
+  text-align: center;
 }
 
 .medium-width-container {
@@ -81,9 +83,9 @@ body {
 }
 
 .flex {
+  display: flex;
   justify-content: space-between;
   max-width: 1200px;
-  display: flex;
 }
 
 .space-small {
@@ -108,8 +110,8 @@ body {
 h1,
 h2,
 h3 {
-  line-height: $lh-default;
   margin: 8px 0;
+  line-height: $lh-default;
 }
 
 h1 {
@@ -118,20 +120,20 @@ h1 {
 }
 
 h2 {
+  margin: 8px 0;
   font-size: $fs-header-medium;
   font-weight: $fw-heavy;
-  margin: 8px 0;
 }
 
 h3 {
+  margin: 8px 0;
   font-size: $fs-header-small;
   font-weight: $fw-default;
-  margin: 8px 0;
 }
 
 p {
-  line-height: $lh-tall;
   margin: 8px 0;
+  line-height: $lh-tall;
 }
 
 a {
@@ -144,15 +146,15 @@ a {
 }
 
 button {
-  cursor: pointer;
-  background-color: $color-orange;
+  padding: 16px 32px;
+  margin: 26px 0;
   font-family: $ff-sans;
   font-size: $fs-default;
-  border: none;
-  padding: 16px 32px;
-  border-radius: 4px;
   color: #000; // required for accessibility purposes (high contrast)
-  margin: 26px 0;
+  cursor: pointer;
+  background-color: $color-orange;
+  border: none;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -161,25 +163,25 @@ button {
 }
 
 video {
-  box-shadow: $bs-default;
   border-radius: 8px;
+  box-shadow: $bs-default;
 }
 
 footer {
-  padding-top: 60px;
   width: 100%;
   height: 300px;
+  padding-top: 60px;
   background-color: $color-default;
 
   p {
-    opacity: 0.8;
     color: $color-white;
+    opacity: 0.8;
   }
 
   img {
-    opacity: 0.8;
-    margin-top: 20px;
     width: 180px;
+    margin-top: 20px;
+    opacity: 0.8;
   }
 }
 
@@ -187,14 +189,16 @@ footer {
 
 // Navigation
 .nav {
-  padding: 50px 0px 20px 0px;
+  padding: 50px 0 20px 0;
+
   a {
-    color: $color-default;
+    display: inline-block;
     padding-bottom: 8px;
     margin-right: 32px;
+    color: $color-default;
     text-decoration: none;
-    display: inline-block;
     transition: border 0.15s ease-in-out;
+
     &:hover {
       border-bottom: 4px $color-orange solid;
     }
@@ -221,47 +225,53 @@ footer {
 }
 
 .small-caps {
-  text-transform: uppercase;
   font-family: $ff-mono;
+  text-transform: uppercase;
 }
+
 // -- END NAVIGATION
 
 // Hero
 .hero-container {
   position: relative;
-  padding: 16px;
   max-width: 1200px;
   height: 550px;
+  padding: 16px;
   margin: auto;
-  background-color: #3b3b3b;
-  text-align: center;
   margin-top: 80px;
   margin-bottom: 80px;
+  text-align: center;
+  background-color: #3b3b3b;
   border-radius: 8px;
   box-shadow: $bs-default;
 
   .hero-flex {
-    justify-content: space-between;
     display: flex;
-    height: 400px;
+    justify-content: space-between;
     width: 90%;
+    height: 400px;
+
     @include vh-positioning;
   }
 
   .hero-text {
     position: relative;
-    height: 100%;
     width: 46%;
+    height: 100%;
     text-align: left;
-    h1, h3 {
+
+    h1,
+    h3 {
       color: $color-white;
     }
   }
 
   .absolute-text {
     height: 350px;
-    @include vh-positioning;
     margin: auto;
+
+    @include vh-positioning;
+
     h2 {
       font-size: $fs-header-small;
       font-weight: $fw-default;
@@ -272,32 +282,34 @@ footer {
   .hero-image {
     width: 50%;
     height: auto;
-    @include bg-image('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=600');
     background-position-y: 30%;
+
+    @include bg-image('https://moab.imgix.net/renderings/moab-rendering-example.png?auto=compress&h=600');
   }
 
   img {
     width: 100%;
-    margin-top: 32px;
-    min-height: 100%;
     max-width: 800px;
-    background-color: lightgrey;
     height: auto;
+    min-height: 100%;
+    margin-top: 32px;
+    background-color: lightgrey;
   }
 }
 
 .inline-icon {
-  height: 1em !important;
   width: 1em !important;
-  background-color: transparent !important;
+  height: 1em !important;
   padding-right: 6px;
+  background-color: transparent !important;
 }
+
 // -- END HERO
 
 // Accomodates large shadow on moab-unboxed image
 .full-width-image {
   width: 100%;
-  margin: -140px 0px;
+  margin: -140px 0;
 }
 
 .left-text {
@@ -305,15 +317,15 @@ footer {
 }
 
 .right-video-player {
-  cursor: pointer;
+  width: 55%;
   height: 350px;
   margin-top: 20px;
-  width: 55%;
+  cursor: pointer;
 }
 
 .section-icon {
   width: 3em;
-  margin: 8px 0px;
+  margin: 8px 0;
 }
 
 .no-style-link {
@@ -321,22 +333,41 @@ footer {
   text-decoration: none;
 }
 
+.list-toggles {
+  text-align: left;
+
+  p {
+    position: relative;
+    display: inline-block;
+    padding: 4px 0;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color;
+
+    &:hover {
+      color: $color-orange-hover;
+    }
+  }
+}
+
 .tutorial-card-container {
-  cursor: pointer;
   width: 31%;
   height: auto;
   min-height: 420px;
-  box-shadow: $bs-default;
+  cursor: pointer;
   border-radius: 8px;
+  box-shadow: $bs-default;
   transition: transform 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+
   &:hover {
     transform: scale(1.02, 1.02);
   }
 
   .tutorial-card-image {
     height: 180px;
-    border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 
   .tutorial-1 {
@@ -353,26 +384,9 @@ footer {
 
   .tutorial-card-content {
     padding: 20px;
+
     p {
       color: $color-grey;
-    }
-  }
-
-
-}
-
-.list-toggles {
-  text-align: left;
-  p {
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    padding: 4px 0px;
-    margin: 8px 0px;
-    transition: 0.2s ease-in-out;
-    transition-property: color, background-color;
-    &:hover {
-      color: $color-orange-hover;
     }
   }
 }
@@ -381,6 +395,7 @@ footer {
   width: 80%;
   height: 600px;
   margin-top: -40px; // product images have extra white space, so pulling the image up slightly
+
   @include bg-image('https://moab.imgix.net/topdown/m2.jpg?auto=compress,format&h=500');
 }
 
@@ -388,7 +403,7 @@ footer {
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-color: #eeeeee;
+  background-color: #eee;
   border-radius: 50%;
 }
 
@@ -411,16 +426,16 @@ footer {
   }
 
   .right-video-player {
-    margin-top: 16px;
     width: 100%;
     height: auto;
+    margin-top: 16px;
   }
 
   .hero-container .hero-flex {
-    border-radius: 0px;
-    margin-top: 30px;
     position: relative;
     flex-direction: column-reverse;
+    margin-top: 30px;
+    border-radius: 0;
 
     .hero-text {
       width: 100%;
@@ -435,7 +450,7 @@ footer {
 
   .full-width-image {
     width: 100%;
-    margin: -80px 0px -40px 0px;
+    margin: -80px 0 -40px 0;
   }
 
   .tutorial-card-container {
@@ -455,7 +470,7 @@ footer {
 
   // Controls stacking order for Features section
   .flex-reverse {
-    flex-direction: column-reverse; 
+    flex-direction: column-reverse;
   }
 
   .mobile-hide {
@@ -463,27 +478,28 @@ footer {
   }
 
   .list-toggles p {
-    margin: 0px 0px;
+    margin: 0 0;
   }
 
   .nav {
-    padding: 30px 0px 0px 0px;
+    padding: 30px 0 0 0;
+
     a {
       margin-right: 16px;
+
       &:last-of-type {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
-
   }
 }
 
 // Special edge case for video player
 @media (min-width: 860px) and (max-width: 1100px) {
   .right-video-player {
-    margin-top: 80px;
     width: 500px;
     height: 300px;
+    margin-top: 80px;
   }
 }
 
@@ -500,7 +516,7 @@ footer {
   h3 {
     font-size: 22px;
   }
-  
+
   .hero-container .hero-flex {
     height: auto;
   }
@@ -513,9 +529,9 @@ footer {
   }
 
   .hero-container .hero-flex .hero-text {
-    text-align: center;
     display: block;
     height: 100%;
+    text-align: center;
   }
 
   .hero-container .absolute-text {
@@ -524,8 +540,8 @@ footer {
   }
 
   .hero-container {
-    border-radius: 0px;
     height: auto;
+    border-radius: 0;
   }
 
   .product-image {
