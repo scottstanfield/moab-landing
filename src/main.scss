@@ -89,25 +89,27 @@ body {
 }
 
 .space-small {
-  margin: 16px 0px;
+  margin: 16px 0;
 }
 
 .space-medium {
-  margin: 32px 0px;
+  margin: 32px 0;
 }
 
 .space-large {
-  margin: 64px 0px;
+  margin: 64px 0;
 }
 
 .space-xlarge {
-  margin: 128px 0px;
+  margin: 128px 0;
 }
 
 // -- END LAYOUT
 
 // Primary elements
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: $lh-default;
   margin: 8px 0;
 }
@@ -137,6 +139,7 @@ p {
 a {
   color: $color-link;
   text-decoration-color: rgba(50, 104, 145, 0.3);
+
   &:hover {
     text-decoration-color: rgba(50, 104, 145, 0.6);
   }
@@ -144,15 +147,16 @@ a {
 
 button {
   cursor: pointer;
-  font-size: $fs-default;
-  font-family: $ff-sans;
   background-color: $color-orange;
+  font-family: $ff-sans;
+  font-size: $fs-default;
   border: none;
   padding: 16px 32px;
   border-radius: 4px;
-  color: black; // required for accessibility purposes (high contrast)
-  margin: 26px 0px;
-  transition: background-color 0.3s ease; 
+  color: #000; // required for accessibility purposes (high contrast)
+  margin: 26px 0;
+  transition: background-color 0.3s ease;
+
   &:hover {
     background-color: $color-orange-hover;
   }
@@ -168,10 +172,12 @@ footer {
   width: 100%;
   height: 300px;
   background-color: $color-default;
+
   p {
     opacity: 0.8;
-    color: white;
+    color: $color-white;
   }
+
   img {
     opacity: 0.8;
     margin-top: 20px;
@@ -261,7 +267,7 @@ footer {
     h2 {
       font-size: $fs-header-small;
       font-weight: $fw-default;
-      color: white;
+      color: $color-white;
     }
   }
 

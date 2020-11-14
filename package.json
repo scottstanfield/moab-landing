@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/scottstanfield/moab-landing#readme",
   "devDependencies": {
+    "@p233/stylelint-config-scss": "^2.0.1",
     "hashmark": "^5.0.0",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
